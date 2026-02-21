@@ -1,0 +1,7 @@
+{
+  "name": "Le Baromètre",
+  "description": "Institut Africain de Suivi et d'Évaluation d'Impact pour le Développement. Excellence en suivi-évaluation, baromètres thématiques et certifications professionnelles.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
