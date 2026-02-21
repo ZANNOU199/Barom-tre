@@ -43,7 +43,7 @@ const barometers = [
     title: "Baromètre Agro-Climat",
     category: "AGRO-CLIMAT",
     desc: "Impact du changement climatique sur les rendements et les zones rurales.",
-    image: "https://picsum.photos/seed/agro/800/600",
+    image: "https://i.ibb.co/Zp7bvqZq/Gemini-Generated-Image-3ddv2v3ddv2v3ddv.png",
   }
 ];
 

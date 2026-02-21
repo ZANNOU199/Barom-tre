@@ -26,7 +26,7 @@ const solutions = [
     image: "https://picsum.photos/seed/odd-baro/800/600"
   },
   {
-    title: "Baromètre Agro-Climato",
+    title: "Baromètre Agro-Climat",
     icon: Sprout,
     status: "DONNÉES SATELLITE",
     desc: "Mesure en temps réel de l'humidité, température, vitesse du vent et gaz à effet de serre. Aide les agriculteurs à optimiser leurs pratiques et accroître leur productivité.",
@@ -34,7 +34,7 @@ const solutions = [
       { label: "Sources", val: "Spatiales" },
       { label: "Précision", val: "92%" }
     ],
-    image: "https://picsum.photos/seed/agro-baro/800/600"
+    image: "https://i.ibb.co/Zp7bvqZq/Gemini-Generated-Image-3ddv2v3ddv2v3ddv.png"
   },
   {
     title: "Baromètre des Communes (IBDC)",
