@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { ArrowRight, BarChart3, Users, ShieldCheck, ClipboardCheck, Award, Mail, Phone, MapPin } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { useLanguage } from '../lib/LanguageContext';
 
 const services = [
   {
@@ -51,13 +52,15 @@ const partners = [
 ];
 
 export default function Home() {
+  const { t } = useLanguage();
+
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
       <section className="relative min-h-[90vh] flex items-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img 
-            src="https://picsum.photos/id/180/1920/1080?blur=2" 
+            src="https://i.ibb.co/d07ttzZJ/Gemini-Generated-Image-btsmu2btsmu2btsm.png" 
             alt="Hero Background" 
             className="w-full h-full object-cover"
             referrerPolicy="no-referrer"
@@ -73,27 +76,27 @@ export default function Home() {
             className="max-w-3xl"
           >
             <span className="inline-block py-1 px-3 bg-blue-600/20 backdrop-blur-md rounded border border-blue-500/30 text-blue-400 text-[10px] font-black uppercase tracking-[0.3em] mb-6">
-              Institut Africain de Suivi et Évaluation
+              {t('hero.badge')}
             </span>
             <h1 className="text-5xl lg:text-7xl font-black text-white leading-[1.1] mb-8 tracking-tight">
-              L’Excellence en Suivi et Évaluation d’Impact pour le <span className="text-blue-500">Développement</span>
+              {t('hero.title')}
             </h1>
             <p className="text-xl text-slate-300 mb-10 leading-relaxed max-w-2xl font-medium">
-              Concevoir, mesurer et optimiser l’impact des politiques et projets à travers l’Afrique pour un futur durable et transparent.
+              {t('hero.desc')}
             </p>
             <div className="flex flex-wrap gap-4">
               <Link 
                 to="/contact"
                 className="bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-lg text-base font-bold transition-all flex items-center gap-2 shadow-xl shadow-red-600/20 active:scale-95"
               >
-                Demander une consultation
+                {t('hero.cta.consult')}
                 <ArrowRight className="w-5 h-5" />
               </Link>
               <Link 
                 to="/solutions"
                 className="bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/30 text-white px-8 py-4 rounded-lg text-base font-bold transition-all active:scale-95"
               >
-                Découvrir nos solutions
+                {t('hero.cta.solutions')}
               </Link>
             </div>
           </motion.div>

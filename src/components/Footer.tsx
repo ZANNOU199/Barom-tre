@@ -1,7 +1,10 @@
 import { Link } from 'react-router-dom';
-import { Mail, Phone, MapPin, Globe, Share2, Linkedin, Twitter } from 'lucide-react';
+import { Mail, Phone, MapPin, Linkedin, Twitter } from 'lucide-react';
+import { useLanguage } from '../lib/LanguageContext';
 
 export default function Footer() {
+  const { t } = useLanguage();
+
   return (
     <footer className="bg-slate-950 text-slate-400 py-20 border-t border-slate-800">
       <div className="max-w-7xl mx-auto px-6">
@@ -28,27 +31,23 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="text-white font-bold mb-6 uppercase text-xs tracking-widest">Expertise</h4>
+            <h4 className="text-white font-bold mb-6 uppercase text-xs tracking-widest">{t('nav.expertise')}</h4>
             <ul className="space-y-4 text-sm">
-              <li><Link to="/expertise" className="hover:text-blue-600 transition-colors">Évaluation d'Impact</Link></li>
-              <li><Link to="/expertise" className="hover:text-blue-600 transition-colors">Systèmes d'Information</Link></li>
-              <li><Link to="/expertise" className="hover:text-blue-600 transition-colors">Analyse Statistique</Link></li>
-              <li><Link to="/expertise" className="hover:text-blue-600 transition-colors">Études Thématiques</Link></li>
+              <li><Link to="/expertise" className="hover:text-blue-600 transition-colors">{t('nav.expertise')}</Link></li>
+              <li><Link to="/solutions" className="hover:text-blue-600 transition-colors">{t('nav.solutions')}</Link></li>
             </ul>
           </div>
 
           <div>
-            <h4 className="text-white font-bold mb-6 uppercase text-xs tracking-widest">Institut</h4>
+            <h4 className="text-white font-bold mb-6 uppercase text-xs tracking-widest">{t('nav.about')}</h4>
             <ul className="space-y-4 text-sm">
-              <li><Link to="/about" className="hover:text-blue-600 transition-colors">À Propos</Link></li>
-              <li><Link to="/about" className="hover:text-blue-600 transition-colors">Notre Équipe</Link></li>
-              <li><Link to="/about" className="hover:text-blue-600 transition-colors">Partenariats</Link></li>
+              <li><Link to="/about" className="hover:text-blue-600 transition-colors">{t('nav.about')}</Link></li>
               <li><Link to="/contact" className="hover:text-blue-600 transition-colors">Contact</Link></li>
             </ul>
           </div>
 
           <div>
-            <h4 className="text-white font-bold mb-6 uppercase text-xs tracking-widest">Contact</h4>
+            <h4 className="text-white font-bold mb-6 uppercase text-xs tracking-widest">{t('footer.contact')}</h4>
             <ul className="space-y-4 text-sm">
               <li className="flex items-center gap-3">
                 <Mail className="w-4 h-4 text-blue-600" />
@@ -60,7 +59,7 @@ export default function Footer() {
               </li>
               <li className="flex items-start gap-3">
                 <MapPin className="w-4 h-4 text-blue-600 mt-1" />
-                Fidjrossè - Centre, Cotonou, Bénin
+                {t('footer.address')}
               </li>
             </ul>
           </div>
