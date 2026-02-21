@@ -6,50 +6,58 @@ const expertises = [
   {
     title: "Conception de systèmes digitalisés",
     icon: Terminal,
-    desc: "Nous accompagnons la transformation numérique du suivi-évaluation par le développement de solutions technologiques sur mesure.",
+    desc: "L'institut Le Baromètre offre une expertise unique en matière de suivi-évaluation et digitalisation pour des systèmes intégrés et dynamiques.",
     items: [
-      "Logiciels de Monitoring & Évaluation (M&E) personnalisés.",
-      "Tableaux de bord de visualisation de données en temps réel.",
-      "Systèmes d'information géographique (SIG) pour le pilotage territorial.",
-      "Plateformes de collecte de données mobiles (ODK, KoboToolbox)."
+      "Conception d'applications mobiles de collecte de données (ODK, KoboToolbox).",
+      "Gestion et analyse de bases de données intégrées et dynamiques.",
+      "Visualisation en temps réel via Dashboards et Géoportails.",
+      "Maintenance et support technique des systèmes digitalisés.",
+      "Fourniture de terminaux (tablettes/téléphones) configurés.",
+      "Hébergement et gestion sécurisée des espaces serveurs."
     ],
     image: "https://picsum.photos/seed/digital/800/600"
   },
   {
-    title: "Renforcement de capacités institutionnelles",
+    title: "Renforcement de capacités",
     icon: School,
-    desc: "Nous renforçons le capital humain des organisations publiques et privées par des programmes de formation certifiants.",
+    desc: "Promotion des compétences institutionnelles et individuelles dans le domaine du suivi, de l'évaluation et de la digitalisation.",
     items: [
-      "Ateliers de formation sur les méthodes d'évaluation d'impact.",
-      "Coaching technique pour les unités de suivi-évaluation.",
-      "Certifications professionnelles en gestion de projet axée sur les résultats.",
-      "Masterclass sur l'analyse de données avancée (Stata, R, Python)."
+      "Diagnostic approfondi des besoins en renforcement.",
+      "Modules sur les fondamentaux en suivi-évaluation.",
+      "Formation aux méthodes d'évaluation d'impact des projets.",
+      "Élaboration et reconstitution de théorie de changement.",
+      "Certificat d'Assistant de recherche à la collecte des données.",
+      "Camp annuel des Évaluateurs Émergents francophones."
     ],
     image: "https://picsum.photos/seed/school/800/600"
   },
   {
-    title: "Appuis techniques et Conseils stratégiques",
+    title: "Appuis et conseils techniques",
     icon: Brain,
-    desc: "Expertise conseil pour l'élaboration, la revue et l'optimisation des politiques publiques.",
+    desc: "Mise à disposition d'un pool de compétences techniques pour un accompagnement stratégique des acteurs de développement.",
     items: [
-      "Assistance technique aux ministères et agences de développement.",
-      "Élaboration de cadres logiques et de théories du changement.",
-      "Audits de performance et revues institutionnelles.",
-      "Plaidoyer basé sur les preuves pour les décideurs politiques."
+      "Études d'évaluation de projets et de systèmes de S&E.",
+      "Conception d'échantillonnage et outils numériques de collecte.",
+      "Collecte de données par voie numérique sur le terrain.",
+      "Analyse avancée de données d'évaluation et d'impact.",
+      "Évaluation des organisations en matière de suivi-évaluation.",
+      "Conseils stratégiques en formulation de politiques publiques."
     ],
     image: "https://picsum.photos/seed/consulting/800/600"
   },
   {
-    title: "Suivi & Évaluation d’impact en Afrique",
+    title: "Centre des Innovations",
     icon: BarChart3,
-    desc: "Une approche rigoureuse pour mesurer les changements réels induits par les interventions de développement.",
+    desc: "Spécialisé dans la conception de solutions sur mesure pour répondre aux besoins spécifiques et complexes de chaque organisation.",
     items: [
-      "Évaluations d'impact randomisées (RCT) et quasi-expérimentales.",
-      "Évaluations de mi-parcours et finales de programmes complexes.",
-      "Études de base (Baseline) et enquêtes de satisfaction.",
-      "Analyse coût-efficacité et mesure de la rentabilité sociale."
+      "Recherche et développement de nouvelles méthodologies.",
+      "Incubation de solutions digitales pour le développement.",
+      "Veille technologique sur les outils de data science.",
+      "Laboratoire d'innovation pour les politiques publiques.",
+      "Partenariats avec des centres de recherche internationaux.",
+      "Publication de baromètres sectoriels innovants."
     ],
-    image: "https://picsum.photos/seed/impact/800/600"
+    image: "https://picsum.photos/seed/innovation/800/600"
   }
 ];
 

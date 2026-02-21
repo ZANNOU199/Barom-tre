@@ -29,7 +29,7 @@ const solutions = [
     title: "Baromètre Agro-Climato",
     icon: Sprout,
     status: "DONNÉES SATELLITE",
-    desc: "Solution numérique innovante utilisée dans divers secteurs, y compris l'agriculture, pour mesurer l'impact climatique sur les rendements et les zones rurales.",
+    desc: "Mesure en temps réel de l'humidité, température, vitesse du vent et gaz à effet de serre. Aide les agriculteurs à optimiser leurs pratiques et accroître leur productivité.",
     stats: [
       { label: "Sources", val: "Spatiales" },
       { label: "Précision", val: "92%" }
@@ -40,7 +40,7 @@ const solutions = [
     title: "Baromètre des Communes (IBDC)",
     icon: Building2,
     status: "INNOVATION LOCALE",
-    desc: "Plateforme numérique informatisée dynamique et innovante pour le suivi des processus de développement au niveau communal et local.",
+    desc: "Suivi-évaluation des Objectifs de Développement Durable (ODD) et du Plan de Développement Communal (PDC) pour les collectivités territoriales décentralisées.",
     stats: [
       { label: "Périmètre", val: "Communes" },
       { label: "Impact", val: "Localisé" }
