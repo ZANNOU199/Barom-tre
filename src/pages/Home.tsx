@@ -57,7 +57,7 @@ export default function Home() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section className="relative min-h-[90vh] flex items-center overflow-hidden">
+      <section className="relative min-h-[80vh] lg:min-h-[90vh] flex items-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img 
             src="https://i.ibb.co/d07ttzZJ/Gemini-Generated-Image-btsmu2btsmu2btsm.png" 
@@ -68,7 +68,7 @@ export default function Home() {
           <div className="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-950/70 to-transparent" />
         </div>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-6 w-full py-24">
+        <div className="relative z-10 max-w-7xl mx-auto px-6 w-full py-16 lg:py-24">
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -78,10 +78,10 @@ export default function Home() {
             <span className="inline-block py-1 px-3 bg-blue-600/20 backdrop-blur-md rounded border border-blue-500/30 text-blue-400 text-[10px] font-black uppercase tracking-[0.3em] mb-6">
               {t('hero.badge')}
             </span>
-            <h1 className="text-5xl lg:text-7xl font-black text-white leading-[1.1] mb-8 tracking-tight">
+            <h1 className="text-4xl sm:text-5xl lg:text-7xl font-black text-white leading-[1.1] mb-8 tracking-tight">
               {t('hero.title')}
             </h1>
-            <p className="text-xl text-slate-300 mb-10 leading-relaxed max-w-2xl font-medium">
+            <p className="text-lg lg:text-xl text-slate-300 mb-10 leading-relaxed max-w-2xl font-medium">
               {t('hero.desc')}
             </p>
             <div className="flex flex-wrap gap-4">
@@ -104,16 +104,16 @@ export default function Home() {
       </section>
 
       {/* Qui Sommes-Nous */}
-      <section className="py-32 bg-white dark:bg-slate-950">
+      <section className="py-16 lg:py-32 bg-white dark:bg-slate-950">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="grid lg:grid-cols-2 gap-20 items-center">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <motion.div 
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               className="relative"
             >
-              <div className="aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl relative z-10">
+              <div className="aspect-video lg:aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl relative z-10">
                 <img 
                   src="https://picsum.photos/seed/team/800/1000" 
                   alt="Team" 
@@ -121,7 +121,7 @@ export default function Home() {
                   referrerPolicy="no-referrer"
                 />
               </div>
-              <div className="absolute -bottom-10 -right-10 w-64 h-64 bg-blue-600/10 rounded-full blur-3xl -z-0" />
+              <div className="absolute -bottom-10 -right-10 w-64 h-64 bg-blue-600/10 rounded-full blur-3xl -z-0 hidden lg:block" />
             </motion.div>
 
             <motion.div
@@ -152,11 +152,11 @@ export default function Home() {
       </section>
 
       {/* Nos Services */}
-      <section className="py-32 bg-slate-50 dark:bg-slate-900/50">
+      <section className="py-16 lg:py-32 bg-slate-50 dark:bg-slate-900/50">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-20">
+          <div className="text-center mb-12 lg:mb-20">
             <h2 className="text-blue-600 font-black tracking-[0.2em] uppercase text-xs mb-4">Expertises Techniques</h2>
-            <h3 className="text-4xl font-black tracking-tight text-slate-900 dark:text-white">Des services à 360° pour vos projets</h3>
+            <h3 className="text-3xl lg:text-4xl font-black tracking-tight text-slate-900 dark:text-white">Des services à 360° pour vos projets</h3>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {services.map((service, idx) => (
@@ -185,12 +185,12 @@ export default function Home() {
       </section>
 
       {/* Baromètres */}
-      <section className="py-32 bg-white dark:bg-slate-950">
+      <section className="py-16 lg:py-32 bg-white dark:bg-slate-950">
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex justify-between items-end mb-12">
             <div>
               <h2 className="text-blue-600 font-black tracking-[0.2em] uppercase text-xs mb-4">Nos Outils de Pilotage</h2>
-              <h3 className="text-4xl font-black tracking-tight text-slate-900 dark:text-white">Les Baromètres Thématiques</h3>
+              <h3 className="text-3xl lg:text-4xl font-black tracking-tight text-slate-900 dark:text-white">Les Baromètres Thématiques</h3>
             </div>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
@@ -246,19 +246,19 @@ export default function Home() {
       </section>
 
       {/* CQP Certification */}
-      <section className="py-24 bg-white dark:bg-slate-950">
+      <section className="py-16 lg:py-24 bg-white dark:bg-slate-950">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="bg-gradient-to-r from-blue-700 to-blue-900 rounded-3xl p-12 lg:p-20 text-white relative overflow-hidden flex flex-col lg:flex-row items-center gap-12">
-            <div className="lg:w-2/3 relative z-10">
+          <div className="bg-gradient-to-r from-blue-700 to-blue-900 rounded-3xl p-8 lg:p-20 text-white relative overflow-hidden flex flex-col lg:flex-row items-center gap-12">
+            <div className="lg:w-2/3 relative z-10 text-center lg:text-left">
               <div className="inline-flex items-center gap-2 py-1 px-4 bg-white/20 backdrop-blur rounded-full text-[10px] font-black tracking-widest mb-6">
                 <Award className="w-4 h-4" />
                 PROGRAMME DE CERTIFICATION
               </div>
-              <h2 className="text-4xl lg:text-5xl font-black mb-6 leading-tight tracking-tight">Certificat de Qualification Professionnelle (CQP)</h2>
-              <p className="text-lg text-blue-100 leading-relaxed mb-8 max-w-2xl font-medium">
+              <h2 className="text-3xl lg:text-5xl font-black mb-6 leading-tight tracking-tight">Certificat de Qualification Professionnelle (CQP)</h2>
+              <p className="text-lg text-blue-100 leading-relaxed mb-8 max-w-2xl font-medium mx-auto lg:mx-0">
                 Un programme académique d'excellence conçu pour former les futurs leaders de l'évaluation d'impact en Afrique. Obtenez une certification reconnue internationalement.
               </p>
-              <div className="flex flex-wrap gap-6">
+              <div className="flex flex-wrap gap-4 lg:gap-6 justify-center lg:justify-start">
                 <div className="flex items-center gap-3">
                   <ShieldCheck className="w-5 h-5 text-red-500" />
                   <span className="font-bold text-sm">Validation Académique</span>
@@ -291,15 +291,15 @@ export default function Home() {
       </section>
 
       {/* Contact Preview */}
-      <section className="py-32 bg-slate-50 dark:bg-slate-900/50">
+      <section className="py-16 lg:py-32 bg-slate-50 dark:bg-slate-900/50">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="grid lg:grid-cols-2 gap-20">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20">
             <div>
-              <h2 className="text-4xl font-black mb-6 tracking-tight text-slate-900 dark:text-white">Prêt à mesurer votre impact ?</h2>
+              <h2 className="text-3xl lg:text-4xl font-black mb-6 tracking-tight text-slate-900 dark:text-white">Prêt à mesurer votre impact ?</h2>
               <p className="text-slate-600 dark:text-slate-400 text-lg mb-12 leading-relaxed">
                 Nos experts sont à votre disposition pour analyser vos besoins et vous proposer une solution sur mesure.
               </p>
-              <div className="space-y-8">
+              <div className="grid sm:grid-cols-2 lg:grid-cols-1 gap-8">
                 <div className="flex items-start gap-5">
                   <div className="w-12 h-12 bg-white dark:bg-slate-950 rounded-lg shadow-sm flex items-center justify-center text-blue-600 flex-shrink-0">
                     <Mail className="w-6 h-6" />
@@ -329,7 +329,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="bg-white dark:bg-slate-950 p-10 rounded-3xl shadow-xl border border-slate-100 dark:border-slate-800">
+            <div className="bg-white dark:bg-slate-950 p-6 lg:p-10 rounded-3xl shadow-xl border border-slate-100 dark:border-slate-800">
               <form className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-6">
                   <div className="space-y-2">

@@ -58,21 +58,21 @@ export default function Certifications() {
   return (
     <div className="flex flex-col">
       {/* Hero */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-blue-700 to-blue-900 py-24 shadow-2xl">
+      <section className="relative overflow-hidden bg-gradient-to-br from-blue-700 to-blue-900 py-12 lg:py-24 shadow-2xl">
         <div className="max-w-7xl mx-auto px-6 relative z-10">
-          <div className="flex flex-col md:flex-row items-center gap-16">
-            <div className="flex-1 text-center md:text-left">
+          <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+            <div className="flex-1 text-center lg:text-left">
               <div className="inline-flex items-center gap-2 bg-amber-500/20 text-amber-400 px-4 py-1.5 rounded-full text-[10px] font-black uppercase tracking-[0.2em] mb-8 border border-amber-500/30">
                 <Award className="w-4 h-4" />
                 Standard d'Excellence Africain
               </div>
-              <h1 className="text-4xl md:text-6xl font-black text-white leading-tight mb-8 tracking-tight">
+              <h1 className="text-3xl sm:text-4xl lg:text-6xl font-black text-white leading-tight mb-8 tracking-tight">
                 Certificat de Qualification Professionnelle (CQP)
               </h1>
-              <p className="text-xl text-blue-100/90 max-w-2xl mb-10 leading-relaxed font-medium">
+              <p className="text-lg lg:text-xl text-blue-100/90 max-w-2xl mb-10 leading-relaxed font-medium mx-auto lg:mx-0">
                 Le programme de référence pour les experts en suivi-évaluation des politiques de développement en Afrique. Validé par les instances académiques internationales.
               </p>
-              <div className="flex flex-wrap gap-6 justify-center md:justify-start">
+              <div className="flex flex-wrap gap-4 lg:gap-6 justify-center lg:justify-start">
                 <div className="flex items-center gap-3 text-white/80">
                   <CheckCircle2 className="w-5 h-5 text-amber-500" />
                   <span className="text-sm font-bold">Diplôme d'État reconnu</span>
@@ -83,9 +83,9 @@ export default function Certifications() {
                 </div>
               </div>
             </div>
-            <div className="w-64 h-64 md:w-80 md:h-80 flex items-center justify-center bg-white/5 rounded-full border-4 border-amber-500/50 backdrop-blur-sm relative">
-              <Award className="w-40 h-40 text-amber-500 drop-shadow-[0_0_20px_rgba(245,158,11,0.4)]" />
-              <div className="absolute -bottom-4 bg-amber-500 text-blue-950 font-black px-6 py-2 rounded-lg text-sm whitespace-nowrap shadow-xl">
+            <div className="w-48 h-48 sm:w-64 sm:h-64 lg:w-80 lg:h-80 flex items-center justify-center bg-white/5 rounded-full border-4 border-amber-500/50 backdrop-blur-sm relative">
+              <Award className="w-24 h-24 sm:w-40 sm:h-40 text-amber-500 drop-shadow-[0_0_20px_rgba(245,158,11,0.4)]" />
+              <div className="absolute -bottom-4 bg-amber-500 text-blue-950 font-black px-4 lg:px-6 py-2 rounded-lg text-xs lg:text-sm whitespace-nowrap shadow-xl">
                 CQP 2024
               </div>
             </div>
@@ -122,22 +122,22 @@ export default function Certifications() {
 
             {/* Modules */}
             <section>
-              <div className="flex items-center justify-between mb-12">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-6 mb-12">
                 <div className="flex items-center gap-4">
                   <div className="h-10 w-2 bg-amber-500 rounded-full" />
-                  <h2 className="text-4xl font-black text-slate-900 dark:text-white tracking-tight">Modules de formation</h2>
+                  <h2 className="text-3xl lg:text-4xl font-black text-slate-900 dark:text-white tracking-tight">Modules de formation</h2>
                 </div>
-                <span className="text-[10px] font-black text-slate-500 bg-slate-100 dark:bg-slate-800 px-4 py-2 rounded-full uppercase tracking-widest">120 Heures de formation</span>
+                <span className="inline-block w-fit text-[10px] font-black text-slate-500 bg-slate-100 dark:bg-slate-800 px-4 py-2 rounded-full uppercase tracking-widest">120 Heures de formation</span>
               </div>
               <div className="space-y-6">
                 {modules.map((mod, i) => (
-                  <div key={i} className="flex items-start gap-8 p-8 bg-white dark:bg-slate-900 rounded-2xl border border-slate-100 dark:border-slate-800 hover:border-blue-600/30 transition-all">
+                  <div key={i} className="flex flex-col sm:flex-row items-start gap-6 lg:gap-8 p-6 lg:p-8 bg-white dark:bg-slate-900 rounded-2xl border border-slate-100 dark:border-slate-800 hover:border-blue-600/30 transition-all">
                     <div className="bg-blue-600/10 p-4 rounded-xl text-blue-600">
                       <BookOpen className="w-6 h-6" />
                     </div>
                     <div>
                       <h4 className="font-black text-xl mb-2 text-slate-900 dark:text-white">{mod.title}</h4>
-                      <p className="text-base text-slate-600 dark:text-slate-400 mb-4 leading-relaxed font-medium">{mod.desc}</p>
+                      <p className="text-sm lg:text-base text-slate-600 dark:text-slate-400 mb-4 leading-relaxed font-medium">{mod.desc}</p>
                       <span className="text-xs font-black text-amber-600 uppercase tracking-[0.2em]">{mod.duration}</span>
                     </div>
                   </div>
@@ -149,50 +149,52 @@ export default function Certifications() {
             <section>
               <div className="flex items-center gap-4 mb-12">
                 <div className="h-10 w-2 bg-amber-500 rounded-full" />
-                <h2 className="text-4xl font-black text-slate-900 dark:text-white tracking-tight">Prochaines sessions</h2>
+                <h2 className="text-3xl lg:text-4xl font-black text-slate-900 dark:text-white tracking-tight">Prochaines sessions</h2>
               </div>
-              <div className="overflow-hidden rounded-2xl border border-slate-100 dark:border-slate-800 bg-white dark:bg-slate-900 shadow-sm">
-                <table className="w-full text-left border-collapse">
-                  <thead className="bg-slate-50 dark:bg-slate-950">
-                    <tr>
-                      <th className="p-6 text-[10px] font-black text-slate-500 uppercase tracking-widest">Lieu</th>
-                      <th className="p-6 text-[10px] font-black text-slate-500 uppercase tracking-widest">Dates</th>
-                      <th className="p-6 text-[10px] font-black text-slate-500 uppercase tracking-widest">Statut</th>
-                      <th className="p-6 text-[10px] font-black text-slate-500 uppercase tracking-widest text-right">Action</th>
-                    </tr>
-                  </thead>
-                  <tbody className="divide-y divide-slate-100 dark:divide-slate-800">
-                    {sessions.map((session, i) => (
-                      <tr key={i} className="hover:bg-slate-50/50 dark:hover:bg-slate-800/50 transition-colors">
-                        <td className="p-6">
-                          <div className="flex items-center gap-4">
-                            <div className="w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-blue-600">
-                              <MapPin className="w-5 h-5" />
-                            </div>
-                            <div>
-                              <div className="font-black text-slate-900 dark:text-white">{session.location}</div>
-                              <div className="text-xs text-slate-500 font-medium">{session.venue}</div>
-                            </div>
-                          </div>
-                        </td>
-                        <td className="p-6">
-                          <div className="text-sm font-bold text-slate-700 dark:text-slate-300 flex items-center gap-2">
-                            <Calendar className="w-4 h-4 text-slate-400" />
-                            {session.dates}
-                          </div>
-                        </td>
-                        <td className="p-6">
-                          <span className={`inline-flex items-center px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-widest ${session.statusColor}`}>
-                            {session.status}
-                          </span>
-                        </td>
-                        <td className="p-6 text-right">
-                          <Link to="/contact" className="text-blue-600 font-black text-xs uppercase tracking-widest hover:underline">S'inscrire</Link>
-                        </td>
+              <div className="overflow-x-auto rounded-2xl border border-slate-100 dark:border-slate-800 bg-white dark:bg-slate-900 shadow-sm">
+                <div className="min-w-[800px]">
+                  <table className="w-full text-left border-collapse">
+                    <thead className="bg-slate-50 dark:bg-slate-950">
+                      <tr>
+                        <th className="p-6 text-[10px] font-black text-slate-500 uppercase tracking-widest">Lieu</th>
+                        <th className="p-6 text-[10px] font-black text-slate-500 uppercase tracking-widest">Dates</th>
+                        <th className="p-6 text-[10px] font-black text-slate-500 uppercase tracking-widest">Statut</th>
+                        <th className="p-6 text-[10px] font-black text-slate-500 uppercase tracking-widest text-right">Action</th>
                       </tr>
-                    ))}
-                  </tbody>
-                </table>
+                    </thead>
+                    <tbody className="divide-y divide-slate-100 dark:divide-slate-800">
+                      {sessions.map((session, i) => (
+                        <tr key={i} className="hover:bg-slate-50/50 dark:hover:bg-slate-800/50 transition-colors">
+                          <td className="p-6">
+                            <div className="flex items-center gap-4">
+                              <div className="w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-blue-600">
+                                <MapPin className="w-5 h-5" />
+                              </div>
+                              <div>
+                                <div className="font-black text-slate-900 dark:text-white">{session.location}</div>
+                                <div className="text-xs text-slate-500 font-medium">{session.venue}</div>
+                              </div>
+                            </div>
+                          </td>
+                          <td className="p-6">
+                            <div className="text-sm font-bold text-slate-700 dark:text-slate-300 flex items-center gap-2">
+                              <Calendar className="w-4 h-4 text-slate-400" />
+                              {session.dates}
+                            </div>
+                          </td>
+                          <td className="p-6">
+                            <span className={`inline-flex items-center px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-widest ${session.statusColor}`}>
+                              {session.status}
+                            </span>
+                          </td>
+                          <td className="p-6 text-right">
+                            <Link to="/contact" className="text-blue-600 font-black text-xs uppercase tracking-widest hover:underline">S'inscrire</Link>
+                          </td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
               </div>
             </section>
           </div>

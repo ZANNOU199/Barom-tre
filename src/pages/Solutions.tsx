@@ -52,22 +52,22 @@ const solutions = [
 export default function Solutions() {
   return (
     <div className="flex flex-col">
-      <section className="bg-white dark:bg-slate-950 pt-20 pb-32">
+      <section className="bg-white dark:bg-slate-950 pt-12 lg:pt-20 pb-16 lg:pb-32">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="max-w-3xl">
-            <h1 className="text-5xl lg:text-7xl font-black text-slate-900 dark:text-white leading-tight mb-8 tracking-tight">
+          <div className="max-w-3xl text-center lg:text-left">
+            <h1 className="text-3xl sm:text-5xl lg:text-7xl font-black text-slate-900 dark:text-white leading-tight mb-8 tracking-tight">
               Nos Baromètres : <span className="text-blue-600">Outils de Décision Stratégique</span>
             </h1>
-            <p className="text-xl text-slate-600 dark:text-slate-400 leading-relaxed font-medium">
+            <p className="text-lg lg:text-xl text-slate-600 dark:text-slate-400 leading-relaxed font-medium">
               Plateformes analytiques de haute précision pour le suivi et l'évaluation d'impact des politiques de développement en Afrique.
             </p>
           </div>
         </div>
       </section>
 
-      <section className="py-32 bg-slate-50 dark:bg-slate-900/50">
+      <section className="py-16 lg:py-32 bg-slate-50 dark:bg-slate-900/50">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="grid md:grid-cols-2 gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
             {solutions.map((sol, idx) => (
               <motion.div 
                 key={idx}
@@ -76,7 +76,7 @@ export default function Solutions() {
                 viewport={{ once: true }}
                 className="bg-white dark:bg-slate-950 rounded-3xl overflow-hidden border border-slate-100 dark:border-slate-800 shadow-sm hover:shadow-2xl transition-all group"
               >
-                <div className="h-72 relative overflow-hidden">
+                <div className="h-64 lg:h-72 relative overflow-hidden">
                   <img 
                     src={sol.image} 
                     alt={sol.title} 
@@ -84,35 +84,35 @@ export default function Solutions() {
                     referrerPolicy="no-referrer"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 to-transparent" />
-                  <div className="absolute bottom-6 left-8">
+                  <div className="absolute bottom-6 left-6 lg:left-8">
                     <div className="flex items-center gap-4 text-white">
-                      <div className="w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center">
-                        <sol.icon className="w-6 h-6" />
+                      <div className="w-10 h-10 lg:w-12 lg:h-12 bg-blue-600 rounded-xl flex items-center justify-center">
+                        <sol.icon className="w-5 h-5 lg:w-6 lg:h-6" />
                       </div>
-                      <h3 className="text-2xl font-black tracking-tight">{sol.title}</h3>
+                      <h3 className="text-xl lg:text-2xl font-black tracking-tight">{sol.title}</h3>
                     </div>
                   </div>
-                  <div className="absolute top-6 right-8">
+                  <div className="absolute top-6 right-6 lg:right-8">
                     <span className="bg-white/90 backdrop-blur-sm px-3 py-1 rounded text-[10px] font-black text-blue-600 tracking-widest uppercase">
                       {sol.status}
                     </span>
                   </div>
                 </div>
-                <div className="p-10">
-                  <p className="text-slate-600 dark:text-slate-400 text-lg mb-8 leading-relaxed font-medium">
+                <div className="p-6 lg:p-10">
+                  <p className="text-base lg:text-lg text-slate-600 dark:text-slate-400 mb-8 leading-relaxed font-medium">
                     {sol.desc}
                   </p>
-                  <div className="grid grid-cols-2 gap-6 mb-10">
+                  <div className="grid grid-cols-2 gap-4 lg:gap-6 mb-10">
                     {sol.stats.map((stat, i) => (
                       <div key={i} className="bg-slate-50 dark:bg-slate-900 p-4 rounded-2xl border border-slate-100 dark:border-slate-800">
                         <p className="text-[10px] font-black text-slate-500 uppercase tracking-widest mb-1">{stat.label}</p>
-                        <p className="text-xl font-black text-blue-600 tracking-tight">{stat.val}</p>
+                        <p className="text-lg lg:text-xl font-black text-blue-600 tracking-tight">{stat.val}</p>
                       </div>
                     ))}
                   </div>
                   <Link 
                     to="/contact"
-                    className="w-full bg-red-600 hover:bg-red-700 text-white py-4 rounded-xl font-black transition-all text-lg shadow-lg shadow-red-600/20 flex items-center justify-center gap-2 active:scale-95"
+                    className="w-full bg-red-600 hover:bg-red-700 text-white py-4 rounded-xl font-black transition-all text-base lg:text-lg shadow-lg shadow-red-600/20 flex items-center justify-center gap-2 active:scale-95"
                   >
                     Accéder au tableau de bord
                     <ArrowRight className="w-5 h-5" />

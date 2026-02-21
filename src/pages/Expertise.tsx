@@ -64,13 +64,13 @@ const expertises = [
 export default function Expertise() {
   return (
     <div className="flex flex-col">
-      <section className="bg-white dark:bg-slate-950 pt-20 pb-32">
+      <section className="bg-white dark:bg-slate-950 pt-12 lg:pt-20 pb-16 lg:pb-32">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="max-w-3xl">
-            <h1 className="text-5xl lg:text-7xl font-black text-slate-900 dark:text-white leading-tight mb-8 tracking-tight">
+          <div className="max-w-3xl text-center lg:text-left">
+            <h1 className="text-3xl sm:text-4xl lg:text-7xl font-black text-slate-900 dark:text-white leading-tight mb-8 tracking-tight">
               Nos Expertises et Services <span className="text-blue-600">Professionnels</span>
             </h1>
-            <p className="text-xl text-slate-600 dark:text-slate-400 leading-relaxed font-medium">
+            <p className="text-lg lg:text-xl text-slate-600 dark:text-slate-400 leading-relaxed font-medium">
               Le Baromètre : Institut Africain de Suivi et d'Évaluation des Politiques de Développement au service de l'impact durable.
             </p>
           </div>
@@ -78,30 +78,30 @@ export default function Expertise() {
       </section>
 
       {expertises.map((exp, idx) => (
-        <section key={idx} className={idx % 2 === 0 ? "py-32 bg-slate-50 dark:bg-slate-900/50" : "py-32 bg-white dark:bg-slate-950"}>
+        <section key={idx} className={idx % 2 === 0 ? "py-16 lg:py-32 bg-slate-50 dark:bg-slate-900/50" : "py-16 lg:py-32 bg-white dark:bg-slate-950"}>
           <div className="max-w-7xl mx-auto px-6">
-            <div className={`flex flex-col lg:flex-row items-center gap-20 ${idx % 2 !== 0 ? 'lg:flex-row-reverse' : ''}`}>
+            <div className={`flex flex-col lg:flex-row items-center gap-12 lg:gap-20 ${idx % 2 !== 0 ? 'lg:flex-row-reverse' : ''}`}>
               <div className="w-full lg:w-1/2">
                 <div className="flex items-center gap-4 mb-6">
                   <div className="w-12 h-12 bg-blue-600/10 rounded-xl flex items-center justify-center text-blue-600">
                     <exp.icon className="w-6 h-6" />
                   </div>
-                  <h2 className="text-3xl font-black text-slate-900 dark:text-white tracking-tight uppercase">{exp.title}</h2>
+                  <h2 className="text-2xl lg:text-3xl font-black text-slate-900 dark:text-white tracking-tight uppercase">{exp.title}</h2>
                 </div>
-                <p className="text-lg text-slate-600 dark:text-slate-400 mb-10 leading-relaxed font-medium">
+                <p className="text-base lg:text-lg text-slate-600 dark:text-slate-400 mb-10 leading-relaxed font-medium">
                   {exp.desc}
                 </p>
-                <ul className="space-y-4 mb-12">
+                <ul className="grid sm:grid-cols-2 lg:grid-cols-1 gap-4 mb-12">
                   {exp.items.map((item, i) => (
                     <li key={i} className="flex items-start gap-3">
                       <CheckCircle2 className="w-5 h-5 text-blue-600 mt-1 flex-shrink-0" />
-                      <span className="text-slate-700 dark:text-slate-300 font-medium">{item}</span>
+                      <span className="text-sm lg:text-base text-slate-700 dark:text-slate-300 font-medium">{item}</span>
                     </li>
                   ))}
                 </ul>
                 <Link 
                   to="/contact"
-                  className="inline-block bg-blue-600 text-white px-8 py-4 rounded-lg font-bold hover:bg-blue-700 transition-all shadow-xl shadow-blue-600/20 active:scale-95 text-center"
+                  className="w-full sm:w-auto inline-block bg-blue-600 text-white px-8 py-4 rounded-lg font-bold hover:bg-blue-700 transition-all shadow-xl shadow-blue-600/20 active:scale-95 text-center"
                 >
                   Demander une expertise
                 </Link>

@@ -4,34 +4,34 @@ import { Mail, Phone, MapPin, Send, MessageSquare, Building2, Globe } from 'luci
 export default function Contact() {
   return (
     <div className="flex flex-col">
-      <section className="bg-white dark:bg-slate-950 pt-20 pb-32">
+      <section className="bg-white dark:bg-slate-950 pt-12 lg:pt-20 pb-16 lg:pb-32">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="max-w-3xl mb-20">
-            <h1 className="text-5xl lg:text-7xl font-black text-slate-900 dark:text-white leading-tight mb-8 tracking-tight">
+          <div className="max-w-3xl mb-12 lg:mb-20 text-center lg:text-left">
+            <h1 className="text-3xl sm:text-5xl lg:text-7xl font-black text-slate-900 dark:text-white leading-tight mb-8 tracking-tight">
               Contact et Demande de <span className="text-blue-600">Consultation</span>
             </h1>
-            <p className="text-xl text-slate-600 dark:text-slate-400 leading-relaxed font-medium">
+            <p className="text-lg lg:text-xl text-slate-600 dark:text-slate-400 leading-relaxed font-medium mx-auto lg:mx-0">
               Institut Africain de Suivi et d'Évaluation des Politiques de Développement. Partenaire stratégique pour l'analyse d'impact.
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-12 gap-20">
+          <div className="grid lg:grid-cols-12 gap-12 lg:gap-20">
             {/* Info */}
-            <div className="lg:col-span-5 space-y-16">
+            <div className="lg:col-span-5 space-y-12 lg:space-y-16">
               <section>
-                <div className="flex items-center gap-4 mb-10">
+                <div className="flex items-center gap-4 mb-8 lg:mb-10 justify-center lg:justify-start">
                   <div className="h-10 w-2 bg-blue-600 rounded-full" />
                   <h3 className="text-2xl font-black text-slate-900 dark:text-white tracking-tight">Nos Coordonnées</h3>
                 </div>
-                <div className="space-y-8">
+                <div className="grid sm:grid-cols-2 lg:grid-cols-1 gap-6 lg:gap-8">
                   {[
                     { title: "Siège Social", icon: MapPin, val: "Fidjrossè - Centre\nCotonou, Bénin" },
                     { title: "Téléphone", icon: Phone, val: "+229 01 69 49 40 72" },
                     { title: "Email", icon: Mail, val: "info@piebarometre.com\ncontact@lebarometre.africa" }
                   ].map((info, i) => (
                     <div key={i} className="flex items-start gap-6 p-6 rounded-2xl hover:bg-slate-50 dark:hover:bg-slate-900 transition-all border border-transparent hover:border-slate-100 dark:hover:border-slate-800 group">
-                      <div className="w-14 h-14 rounded-xl bg-blue-600/10 text-blue-600 flex items-center justify-center shrink-0 group-hover:bg-blue-600 group-hover:text-white transition-all">
-                        <info.icon className="w-6 h-6" />
+                      <div className="w-12 h-12 lg:w-14 lg:h-14 rounded-xl bg-blue-600/10 text-blue-600 flex items-center justify-center shrink-0 group-hover:bg-blue-600 group-hover:text-white transition-all">
+                        <info.icon className="w-5 h-5 lg:w-6 lg:h-6" />
                       </div>
                       <div>
                         <h4 className="font-black text-slate-900 dark:text-white mb-2">{info.title}</h4>
@@ -63,15 +63,15 @@ export default function Contact() {
 
             {/* Form */}
             <div className="lg:col-span-7">
-              <div className="bg-white dark:bg-slate-900 rounded-3xl p-10 md:p-16 shadow-2xl border border-slate-100 dark:border-slate-800 relative overflow-hidden">
+              <div className="bg-white dark:bg-slate-900 rounded-3xl p-6 md:p-10 lg:p-16 shadow-2xl border border-slate-100 dark:border-slate-800 relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-blue-600/5 rounded-full -mr-16 -mt-16" />
                 <div className="relative z-10">
-                  <div className="mb-12">
-                    <h3 className="text-3xl font-black mb-4 tracking-tight text-slate-900 dark:text-white">Demander une consultation</h3>
+                  <div className="mb-8 lg:mb-12">
+                    <h3 className="text-2xl lg:text-3xl font-black mb-4 tracking-tight text-slate-900 dark:text-white">Demander une consultation</h3>
                     <p className="text-slate-500 dark:text-slate-400 font-medium">Veuillez remplir le formulaire ci-dessous pour qualifier votre projet d'évaluation.</p>
                   </div>
-                  <form className="space-y-8">
-                    <div className="grid md:grid-cols-2 gap-8">
+                  <form className="space-y-6 lg:space-y-8">
+                    <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
                       <div className="space-y-3">
                         <label className="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em]">Nom Complet</label>
                         <input className="w-full px-5 py-4 rounded-xl border-2 border-slate-100 dark:border-slate-800 dark:bg-slate-950 focus:ring-2 focus:ring-blue-600 focus:border-blue-600 transition-all outline-none font-medium" placeholder="Jean Dupont" type="text" />
@@ -81,7 +81,7 @@ export default function Contact() {
                         <input className="w-full px-5 py-4 rounded-xl border-2 border-slate-100 dark:border-slate-800 dark:bg-slate-950 focus:ring-2 focus:ring-blue-600 focus:border-blue-600 transition-all outline-none font-medium" placeholder="nom@organisation.org" type="email" />
                       </div>
                     </div>
-                    <div className="grid md:grid-cols-2 gap-8">
+                    <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
                       <div className="space-y-3">
                         <label className="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em]">Type d'Organisation</label>
                         <div className="relative">
@@ -114,7 +114,7 @@ export default function Contact() {
                       <textarea className="w-full px-5 py-4 rounded-xl border-2 border-slate-100 dark:border-slate-800 dark:bg-slate-950 focus:ring-2 focus:ring-blue-600 focus:border-blue-600 transition-all outline-none font-medium resize-none" placeholder="Décrivez brièvement vos besoins..." rows={5}></textarea>
                     </div>
                     <div className="pt-6 flex flex-col md:flex-row items-center justify-between gap-8">
-                      <p className="text-[10px] text-slate-400 font-bold uppercase tracking-widest leading-relaxed max-w-[300px]">
+                      <p className="text-[10px] text-slate-400 font-bold uppercase tracking-widest leading-relaxed max-w-[300px] text-center md:text-left">
                         En envoyant ce formulaire, vous acceptez notre politique de confidentialité.
                       </p>
                       <button className="w-full md:w-auto min-w-[240px] bg-red-600 text-white px-10 py-5 rounded-xl font-black text-lg hover:bg-red-700 hover:shadow-2xl hover:shadow-red-600/30 transition-all flex items-center justify-center gap-3 active:scale-95" type="submit">

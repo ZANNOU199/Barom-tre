@@ -50,17 +50,18 @@ export default function About() {
   return (
     <div className="flex flex-col">
       {/* Hero */}
-      <section className="bg-white dark:bg-slate-950 pt-20 pb-32">
+      <section className="bg-white dark:bg-slate-950 pt-12 lg:pt-20 pb-16 lg:pb-32">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
+              className="text-center lg:text-left"
             >
-              <h1 className="text-4xl lg:text-6xl font-black text-slate-900 dark:text-white leading-tight mb-8 tracking-tight">
+              <h1 className="text-3xl sm:text-4xl lg:text-6xl font-black text-slate-900 dark:text-white leading-tight mb-8 tracking-tight">
                 L'Institut Africain de <span className="text-blue-600">Suivi-Évaluation d'Impact</span>
               </h1>
-              <p className="text-xl text-slate-600 dark:text-slate-400 leading-relaxed max-w-xl font-medium">
+              <p className="text-lg lg:text-xl text-slate-600 dark:text-slate-400 leading-relaxed max-w-xl font-medium mx-auto lg:mx-0">
                 Un pool d'Experts nationaux et internationaux fournissant un appui technique adapté aux décideurs en matière de données probantes.
               </p>
             </motion.div>
@@ -73,9 +74,9 @@ export default function About() {
                   referrerPolicy="no-referrer"
                 />
               </div>
-              <div className="absolute -bottom-6 -left-6 bg-blue-600 p-8 rounded-xl text-white shadow-2xl">
-                <p className="text-4xl font-black">12+</p>
-                <p className="text-[10px] font-black uppercase tracking-widest opacity-80">Années d'impact</p>
+              <div className="absolute -bottom-4 lg:-bottom-6 -left-4 lg:-left-6 bg-blue-600 p-4 lg:p-8 rounded-xl text-white shadow-2xl">
+                <p className="text-2xl lg:text-4xl font-black">12+</p>
+                <p className="text-[8px] lg:text-[10px] font-black uppercase tracking-widest opacity-80">Années d'impact</p>
               </div>
             </div>
           </div>
@@ -83,13 +84,13 @@ export default function About() {
       </section>
 
       {/* Values & Leimotiv */}
-      <section className="py-24 bg-slate-900 text-white">
+      <section className="py-16 lg:py-24 bg-slate-900 text-white">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
+          <div className="text-center mb-12 lg:mb-16">
             <h2 className="text-blue-500 font-black tracking-[0.2em] uppercase text-xs mb-4">Notre ADN</h2>
-            <h3 className="text-4xl font-black tracking-tight">Intelligence collective, Innovation, Respect et Confiance</h3>
+            <h3 className="text-3xl lg:text-4xl font-black tracking-tight">Intelligence collective, Innovation, Respect et Confiance</h3>
           </div>
-          <div className="grid md:grid-cols-3 gap-12">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
             <div className="space-y-4">
               <h4 className="text-xl font-bold text-blue-400">MISSION</h4>
               <p className="text-slate-300 leading-relaxed">Faciliter l’accès et l’utilisation des données probantes produites pour optimiser les politiques de développement.</p>
@@ -107,11 +108,11 @@ export default function About() {
       </section>
 
       {/* History Timeline */}
-      <section className="py-32 bg-white dark:bg-slate-950">
+      <section className="py-16 lg:py-32 bg-white dark:bg-slate-950">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="flex items-center gap-4 mb-16">
+          <div className="flex items-center gap-4 mb-12 lg:mb-16">
             <div className="h-10 w-2 bg-blue-600 rounded-full" />
-            <h2 className="text-4xl font-black text-slate-900 dark:text-white tracking-tight">Notre Historique</h2>
+            <h2 className="text-3xl lg:text-4xl font-black text-slate-900 dark:text-white tracking-tight">Notre Historique</h2>
           </div>
           <div className="space-y-12">
             {history.map((item, idx) => (
@@ -120,15 +121,15 @@ export default function About() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="flex flex-col md:flex-row gap-8 items-start border-l-2 border-slate-100 dark:border-slate-800 pl-8 relative"
+                className="flex flex-col sm:flex-row gap-4 sm:gap-8 items-start border-l-2 border-slate-100 dark:border-slate-800 pl-8 relative"
               >
                 <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-blue-600 shadow-lg shadow-blue-600/50" />
-                <div className="md:w-32 flex-shrink-0">
-                  <span className="text-2xl font-black text-blue-600">{item.year}</span>
+                <div className="sm:w-32 flex-shrink-0">
+                  <span className="text-xl lg:text-2xl font-black text-blue-600">{item.year}</span>
                 </div>
                 <div className="flex-1">
-                  <h4 className="text-xl font-bold text-slate-900 dark:text-white mb-2">{item.title}</h4>
-                  <p className="text-slate-600 dark:text-slate-400 leading-relaxed">{item.desc}</p>
+                  <h4 className="text-lg lg:text-xl font-bold text-slate-900 dark:text-white mb-2">{item.title}</h4>
+                  <p className="text-sm lg:text-base text-slate-600 dark:text-slate-400 leading-relaxed">{item.desc}</p>
                 </div>
               </motion.div>
             ))}
@@ -137,13 +138,13 @@ export default function About() {
       </section>
 
       {/* Team */}
-      <section className="py-32 bg-white dark:bg-slate-950">
+      <section className="py-16 lg:py-32 bg-white dark:bg-slate-950">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-20">
+          <div className="text-center mb-12 lg:mb-20">
             <h2 className="text-blue-600 font-black tracking-[0.2em] uppercase text-xs mb-4">Expertise Panafricaine</h2>
-            <h3 className="text-4xl font-black tracking-tight text-slate-900 dark:text-white">Notre Équipe d'Experts</h3>
+            <h3 className="text-3xl lg:text-4xl font-black tracking-tight text-slate-900 dark:text-white">Notre Équipe d'Experts</h3>
           </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {team.map((member, idx) => (
               <motion.div 
                 key={idx}

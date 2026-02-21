@@ -35,43 +35,43 @@ const news = [
 export default function News() {
   return (
     <div className="flex flex-col">
-      <section className="bg-white dark:bg-slate-950 pt-20 pb-16">
+      <section className="bg-white dark:bg-slate-950 pt-12 lg:pt-20 pb-16">
         <div className="max-w-7xl mx-auto px-6">
-          <nav className="flex items-center gap-2 text-slate-400 text-[10px] font-black uppercase tracking-[0.3em] mb-8">
+          <nav className="hidden sm:flex items-center gap-2 text-slate-400 text-[10px] font-black uppercase tracking-[0.3em] mb-8">
             <a href="/" className="hover:text-blue-600">Accueil</a>
             <ArrowRight className="w-3 h-3" />
             <span className="text-slate-900 dark:text-white">Actualités & Événements</span>
           </nav>
           
-          <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16">
-            <div className="max-w-3xl">
-              <h1 className="text-5xl lg:text-7xl font-black text-slate-900 dark:text-white leading-tight mb-8 tracking-tight">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-12 lg:mb-16">
+            <div className="max-w-3xl text-center md:text-left">
+              <h1 className="text-3xl sm:text-5xl lg:text-7xl font-black text-slate-900 dark:text-white leading-tight mb-8 tracking-tight">
                 Actualités, Webinaires et <span className="text-blue-600">Publications</span>
               </h1>
-              <p className="text-xl text-slate-600 dark:text-slate-400 leading-relaxed font-medium">
+              <p className="text-lg lg:text-xl text-slate-600 dark:text-slate-400 leading-relaxed font-medium">
                 Suivez l'impact et le suivi des politiques de développement en Afrique à travers nos rapports et événements exclusifs.
               </p>
             </div>
-            <button className="flex items-center gap-3 px-6 py-3 rounded-xl border-2 border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-900 transition-all font-black text-xs uppercase tracking-widest">
+            <button className="w-full sm:w-auto flex items-center justify-center gap-3 px-6 py-3 rounded-xl border-2 border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-900 transition-all font-black text-xs uppercase tracking-widest">
               <Rss className="w-4 h-4" /> S'abonner
             </button>
           </div>
 
           {/* Featured */}
-          <div className="group relative overflow-hidden rounded-3xl bg-slate-950 aspect-[21/9] flex items-end mb-24 shadow-2xl">
+          <div className="group relative overflow-hidden rounded-3xl bg-slate-950 aspect-video lg:aspect-[21/9] flex items-end mb-16 lg:mb-24 shadow-2xl">
             <div className="absolute inset-0 bg-cover bg-center transition-transform duration-1000 group-hover:scale-105 opacity-60" style={{ backgroundImage: "url('https://picsum.photos/seed/featured/1600/900')" }} />
             <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent" />
-            <div className="relative p-12 w-full max-w-4xl">
-              <span className="inline-block px-4 py-1.5 bg-blue-600 text-white text-[10px] font-black tracking-[0.3em] uppercase rounded-lg mb-6 shadow-lg shadow-blue-600/20">
+            <div className="relative p-6 lg:p-12 w-full max-w-4xl">
+              <span className="inline-block px-4 py-1.5 bg-blue-600 text-white text-[10px] font-black tracking-[0.3em] uppercase rounded-lg mb-4 lg:mb-6 shadow-lg shadow-blue-600/20">
                 À la une • Publication
               </span>
-              <h3 className="text-4xl md:text-5xl font-black text-white mb-6 leading-tight tracking-tight">Évaluation de l'impact des politiques de développement en Afrique de l'Ouest 2024</h3>
-              <p className="text-slate-200 text-xl mb-8 line-clamp-2 max-w-2xl font-medium">Découvrez les conclusions majeures de notre dernier rapport institutionnel sur l'efficacité des interventions publiques et privées.</p>
-              <div className="flex items-center gap-8">
-                <button className="bg-white text-slate-950 px-8 py-4 rounded-xl font-black text-sm hover:bg-slate-100 transition-all flex items-center gap-3 active:scale-95">
+              <h3 className="text-2xl sm:text-4xl lg:text-5xl font-black text-white mb-4 lg:mb-6 leading-tight tracking-tight">Évaluation de l'impact des politiques de développement en Afrique de l'Ouest 2024</h3>
+              <p className="text-slate-200 text-sm lg:text-xl mb-6 lg:mb-8 line-clamp-2 max-w-2xl font-medium">Découvrez les conclusions majeures de notre dernier rapport institutionnel sur l'efficacité des interventions publiques et privées.</p>
+              <div className="flex flex-col sm:flex-row sm:items-center gap-4 lg:gap-8">
+                <button className="w-full sm:w-auto bg-white text-slate-950 px-8 py-4 rounded-xl font-black text-sm hover:bg-slate-100 transition-all flex items-center justify-center gap-3 active:scale-95">
                   Lire le rapport <ArrowRight className="w-5 h-5" />
                 </button>
-                <div className="flex items-center gap-3 text-slate-400 text-sm font-bold italic">
+                <div className="flex items-center gap-3 text-slate-400 text-xs lg:text-sm font-bold italic">
                   <Clock className="w-4 h-4" />
                   15 Octobre 2023 • 12 min
                 </div>
